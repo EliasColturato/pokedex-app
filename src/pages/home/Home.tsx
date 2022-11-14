@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import Pokemon, { PokemonProps } from '../../components/pokemon';
+import { PokemonsWrapper, Wrapper } from './styleHome';
 
 const Home = () => {
   const [pokemons, setPokemons] = useState<PokemonProps[]>([]);
@@ -12,9 +13,8 @@ const Home = () => {
     listPokemons();
   }, []);
   return (
-    <>
-      <div>
-        <h1>Pokedex</h1>
+    <Wrapper>
+      <PokemonsWrapper>
         {pokemons &&
           pokemons.map((item, index) => {
             return (
@@ -24,8 +24,8 @@ const Home = () => {
               </div>
             );
           })}
-      </div>
-    </>
+      </PokemonsWrapper>
+    </Wrapper>
   );
 };
 
