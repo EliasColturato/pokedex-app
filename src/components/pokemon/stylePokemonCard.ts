@@ -5,29 +5,14 @@ export const Wrapper = styled.div`
   font-size: 12px;
   border: 1px solid #aaa;
   border-radius: 1rem;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  padding: 5px 15px 15px 15px;
   width: 250px;
-  height: 250px;
-  img {
-    max-width: 30%;
-  }
-  a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0.5rem;
-    background-color: purple;
-    border-radius: 0.5rem;
-    margin-top: 0.5rem;
-    transition: all 0.3s;
-  }
-  a:hover {
-    border: 1px solid purple;
-    background: none;
-    color: purple;
-  }
+  height: 300px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
 `;
 
 export const PokemonName = styled.div`
@@ -38,5 +23,17 @@ export const PokemonName = styled.div`
   text-transform: capitalize;
   p {
     opacity: 0.35;
+  }
+`;
+
+export const PokemonImage = styled.div`
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 150px;
+    height: 150px;
   }
 `;

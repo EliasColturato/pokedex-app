@@ -3,7 +3,7 @@ import { PokemonProps } from './Pokemon.types';
 import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
-import { Wrapper, PokemonName } from './stylePokemonCard';
+import { Wrapper, PokemonName, PokemonImage } from './stylePokemonCard';
 
 import PokemonsType from '../pokemons-type/index';
 
@@ -33,15 +33,18 @@ const Pokemon: React.FC<PokemonProps> = ({ name }) => {
 
   return (
     <>
-      <Wrapper>
-        <PokemonName>
-          <h1>{name}</h1>
-          <p>#{pokemonId}</p>
-        </PokemonName>
-        <img src={`${pokemonImage}`} alt="" />
-        <PokemonsType pokemonType={pokemonType} />
-        <Link to={`/pokemon/${name}`}>Ver Detalhes</Link>
-      </Wrapper>
+      <Link to={`/pokemon/${name}`} style={{ textDecoration: 'none' }}>
+        <Wrapper>
+          <PokemonName>
+            <h1>{name}</h1>
+            <p>#{('000' + pokemonId).slice(-3)}</p>
+          </PokemonName>
+          <PokemonImage>
+            <img src={`${pokemonImage}`} alt="" />
+          </PokemonImage>
+          <PokemonsType pokemonType={pokemonType} />
+        </Wrapper>
+      </Link>
     </>
   );
 };

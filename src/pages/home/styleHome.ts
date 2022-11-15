@@ -1,4 +1,9 @@
 import styled from 'styled-components';
+import { colors } from '../../utils/colors';
+
+export const Wrapper = styled.div`
+  background-color: ${colors.backgroundColor};
+`;
 
 export const PokemonsWrapper = styled.div`
   display: flex;
@@ -7,5 +12,3 @@ export const PokemonsWrapper = styled.div`
   column-gap: 2rem;
   row-gap: 2rem;
 `;
-
-export const Wrapper = styled.div``;
