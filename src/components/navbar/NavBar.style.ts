@@ -37,3 +37,24 @@ export const FilterBtn = styled.div`
   align-items: center;
   display: center;
 `;
+
+export const ItemPerPageBtn = styled.div`
+  position: relative;
+  font-family: Arial;
+  select {
+    background: none;
+    color: ${colors.white};
+    border: 1px solid ${colors.white};
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  select:focus {
+    outline: none;
+  }
+  option {
+    color: ${colors.white};
+    border-radius: 1rem;
+    font-weight: bold;
+    background: ${colors.backgroundNav};
+  }
+`;

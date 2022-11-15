@@ -8,22 +8,33 @@ import NavBar from '../../components/navbar/index';
 const Home = () => {
   const [pokemons, setPokemons] = useState<PokemonProps[]>([]);
   const [page, setPage] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(30);
+  const [maxPokemon, setMaxPokemon] = useState(0);
   useEffect(() => {
     async function listPokemons() {
-      const response = await api.get(`pokemon/?offset=${page}&limit=30`);
+      const response = await api.get(
+        `pokemon/?offset=${page}&limit=${itemsPerPage}`
+      );
       setPokemons(response.data.results);
+      setMaxPokemon(response.data.count / itemsPerPage);
     }
     listPokemons();
-  }, [page]);
+  }, [page, itemsPerPage]);
   function nextPage() {
-    setPage(page + 30);
+    setPage(page + itemsPerPage);
   }
   function previousPage() {
-    setPage(page - 30);
+    setPage(page - itemsPerPage);
   }
   return (
     <Wrapper>
-      <NavBar nextPage={nextPage} previousPage={previousPage} page={page} />
+      <NavBar
+        nextPage={nextPage}
+        previousPage={previousPage}
+        page={page}
+        setItemsPerPage={setItemsPerPage}
+        maxPokemon={maxPokemon}
+      />
       <PokemonsWrapper>
         {pokemons &&
           pokemons.map((item, index) => {

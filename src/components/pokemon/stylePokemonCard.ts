@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div`
   font-family: 'Inter', sans-serif;
@@ -35,5 +35,19 @@ export const PokemonImage = styled.div`
   img {
     width: 150px;
     height: 150px;
+  }
+`;
+
+const loadAnimation = keyframes`
+ 0% { transform: rotate(0deg) }
+ 100% { transform:rotate(360deg)}
+`;
+
+export const Loading = styled.div`
+  animation: ${loadAnimation};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  svg {
+    padding: 60px;
   }
 `;

@@ -10,4 +10,5 @@ export const WrapperType = styled.div<{ borderColor?: string }>`
   align-items: center;
   display: flex;
   border-radius: 0.5rem;
+  text-transform: capitalize;
 `;
