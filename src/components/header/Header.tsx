@@ -1,5 +1,6 @@
 import React from 'react';
-import { Wrapper, Content } from './styleHeader';
+import ListPokemon from '../list-pokemon';
+import { Wrapper, Content, WrapperInput } from './styleHeader';
 
 type ImageType = {
   pathImg: string;
@@ -9,9 +10,10 @@ const Header: React.FC<ImageType> = ({ pathImg }) => {
   return (
     <Wrapper>
       <Content>
-
-      <img src={pathImg} alt="LogoPokedex" />
-      <input type="text" placeholder="Qual pokemon quer descobrir?" />
+        <img src={pathImg} alt="LogoPokedex" />
+        <WrapperInput>
+          <ListPokemon />
+        </WrapperInput>
       </Content>
     </Wrapper>
   );

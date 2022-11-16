@@ -29,7 +29,6 @@ const NavBar: React.FC<NavBarProps> = ({
   maxPokemon,
 }) => {
   const [numberPage, setNumberPage] = useState(1);
-  console.log(numberPage, maxPokemon);
 
   return (
     <WrapperNavBar>

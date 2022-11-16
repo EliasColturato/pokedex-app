@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
     width: 278px;
     height: 40px;
     margin-left: 3rem;
+    color: ${colors.white};
   }
 `;
 
@@ -28,4 +29,8 @@ export const Content = styled.div`
   height: 191px;
   display: flex;
   align-items: center;
+`;
+
+export const WrapperInput = styled.div`
+  position: relative;
 `;
