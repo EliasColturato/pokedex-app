@@ -27,4 +27,9 @@ export const WrapperItem = styled.div`
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+  a {
+    text-decoration: none;
+    color: ${colors.white};
+  }
 `;

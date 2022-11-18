@@ -41,7 +41,7 @@ const ListPokemon = () => {
             filterPokemon.map(item => {
               return (
                 <Link to={`/pokemon/${item.name}`} key={item.name}>
-                  <ListPokemonItem name={item.name} />;
+                  <ListPokemonItem name={item.name} />
                 </Link>
               );
             })}
