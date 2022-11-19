@@ -8,24 +8,25 @@ export const WrapperItem = styled.div`
   left: 50px;
   overflow-y: scroll;
   height: 300px;
-  width: 350px;
+  width: 310px;
   border: 1px solid ${colors.white};
   color: ${colors.white};
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   background-color: ${colors.backgroundColor};
   ::-webkit-scrollbar {
-    width: 10px;
-    border-radius: 1rem;
+    width: 7px;
   }
-  overflow-x: hidden;
+
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
   }
-  ::-webkit-scrollbar {
-    width: 10px;
+  ::-webkit-scrollbar-thumb {
+    background: ${colors.backgroundNav};
+    border-radius: 15px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: ${colors.white};
   }
 
   a {

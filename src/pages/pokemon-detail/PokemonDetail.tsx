@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { PokemonTypesProp } from '../../components/pokemon/Pokemon';
+import PokemonsType from '../../components/pokemons-type';
 import api from '../../services/api';
 import {
   Wrapper,
@@ -7,11 +9,13 @@ import {
   PokemonTexto,
   PokemonDetails,
   Title,
+  Atributes,
 } from './PokemonDetail.style';
 import { PokemonDetailProps } from './PokemonDetail.type';
 
 const PokemonDetail = () => {
   const { name } = useParams();
+  const [pokemonType, setPokemonType] = useState<PokemonTypesProp[]>([]);
   const [pokemonDetail, setPokemonDetail] = useState<PokemonDetailProps | null>(
     null
   );
@@ -27,9 +31,10 @@ const PokemonDetail = () => {
           ? dreamWorldSprite
           : response.data.sprites.front_default
       );
+      setPokemonType(response.data.types);
     }
     PokemonDetail();
-  }, []);
+  }, [name]);
 
   return (
     <Wrapper>
@@ -43,10 +48,11 @@ const PokemonDetail = () => {
               <h1>{pokemonDetail.name}</h1>
               <p>#{('000' + pokemonDetail.id).slice(-3)}</p>
             </Title>
-            <div id="atributes">
+            <Atributes>
               <p>Weight:</p>
-              <p>{pokemonDetail.weight}</p>
-            </div>
+              <h1>{pokemonDetail.weight}kg</h1>
+            </Atributes>
+            <PokemonsType pokemonType={pokemonType} />
           </PokemonTexto>
         </PokemonDetails>
       )}

@@ -8,9 +8,10 @@ export const ItemWrapper = styled.div<{ changeWidth: boolean }>`
   transition: all 0.3s;
   text-align: left;
   column-gap: 1rem;
+  padding: 0 1rem;
   img {
     width: ${({ changeWidth }) => (changeWidth ? '100px' : '40px')};
-    padding: ${({ changeWidth }) => (changeWidth ? '0' : '26px')};
+    padding: ${({ changeWidth }) => (changeWidth ? '0' : '20px')};
   }
   p {
     text-transform: capitalize;

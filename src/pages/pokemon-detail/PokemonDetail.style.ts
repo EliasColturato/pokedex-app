@@ -35,3 +35,10 @@ export const ImageWrapper = styled.div`
 `;
 
 export const PokemonTexto = styled.div``;
+
+export const Atributes = styled.div`
+  color: ${colors.white};
+  h1 {
+    text-transform: lowercase;
+  }
+`;
