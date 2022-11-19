@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     border: 1px solid #aaa;
     width: 200px;
     height: 30px;
-    border-radius: 2rem;
+    border-radius: 10px;
     padding: 0 1rem;
     background: none;
     width: 278px;

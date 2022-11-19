@@ -7,11 +7,12 @@ import {
   FilterBtn,
   ItemPerPageBtn,
 } from './NavBar.style';
+
 import {
-  AiOutlineArrowRight,
-  AiOutlineArrowLeft,
-  AiOutlineFilter,
-} from 'react-icons/ai';
+  ArrowForwardCircleOutline,
+  ArrowBackCircleOutline,
+  FilterCircleOutline,
+} from 'react-ionicons';
 
 interface NavBarProps {
   page: number;
@@ -51,8 +52,13 @@ const NavBar: React.FC<NavBarProps> = ({
               setNumberPage(numberPage - 1);
             }}
           >
-            <AiOutlineArrowLeft size={16} />
-            Anterior
+            <ArrowBackCircleOutline
+              color={'#00000'}
+              title={''}
+              height="30px"
+              width="30px"
+            />
+            <p>Página Anterior</p>
           </PreviousBtn>
         )}
         {numberPage < maxPokemon && (
@@ -62,13 +68,22 @@ const NavBar: React.FC<NavBarProps> = ({
               setNumberPage(numberPage + 1);
             }}
           >
-            Próxima
-            <AiOutlineArrowRight size={16} />
+            <p>Próxima Página</p>
+            <ArrowForwardCircleOutline
+              color={'#00000'}
+              title={''}
+              height="30px"
+              width="30px"
+            />
           </NextBtn>
         )}
         <FilterBtn>
-          Filtrar:
-          <AiOutlineFilter size={16} />
+          <FilterCircleOutline
+            color={'#00000'}
+            title={''}
+            height="30px"
+            width="30px"
+          />
         </FilterBtn>
       </Content>
     </WrapperNavBar>

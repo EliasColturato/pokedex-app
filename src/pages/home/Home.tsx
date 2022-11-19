@@ -4,7 +4,6 @@ import Pokemon, { PokemonProps } from '../../components/pokemon';
 import { PokemonsWrapper, Wrapper } from './styleHome';
 
 import NavBar from '../../components/navbar/index';
-import ListPokemon from '../../components/list-pokemon';
 
 const Home = () => {
   const [pokemons, setPokemons] = useState<PokemonProps[]>([]);
