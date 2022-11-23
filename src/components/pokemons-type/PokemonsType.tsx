@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { PokemonTypesProp } from '../pokemon/Pokemon';
 import { Wrapper } from './PokemonType.style';
 import PokemonType from './pokemon-type/';

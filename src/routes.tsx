@@ -6,7 +6,7 @@ import Header from './components/header/index';
 const RoutesApp = () => {
   return (
     <Router>
-      <Header pathImg="/img/logo.svg" />
+      <Header pathImg={'./img/logo.svg'} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pokemon/:name" element={<PokemonDetail />} />

@@ -5,6 +5,7 @@ export const WrapperNavBar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   color: ${colors.white};
   padding: 2rem;
 `;

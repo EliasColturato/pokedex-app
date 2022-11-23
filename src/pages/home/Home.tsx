@@ -39,7 +39,6 @@ const Home = () => {
         {pokemons &&
           pokemons.map((item, index) => {
             return (
-              //estilizar component pai
               <div key={index}>
                 <Pokemon name={item.name} />
               </div>

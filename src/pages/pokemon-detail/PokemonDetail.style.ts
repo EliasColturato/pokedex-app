@@ -6,12 +6,12 @@ export const Wrapper = styled.div`
   text-transform: capitalize;
   justify-content: center;
   background-color: ${colors.backgroundColor};
-  height: calc(100vh - 150px);
 `;
 
 export const PokemonDetails = styled.div`
   display: flex;
-  width: 600px;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
 `;
 
@@ -37,8 +37,26 @@ export const ImageWrapper = styled.div`
 export const PokemonTexto = styled.div``;
 
 export const Atributes = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: ${colors.white};
   h1 {
     text-transform: lowercase;
   }
+`;
+
+export const PokemonHabilities = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${colors.white};
+  text-align: left;
+`;
+
+export const AbilityTitle = styled.div`
+  margin: 1rem;
+`;
+
+export const AbilityName = styled.div`
+  display: flex;
 `;
